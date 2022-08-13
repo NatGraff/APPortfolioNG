@@ -1,0 +1,21 @@
+.row{
+    padding: 20px;
+}
+
+div{
+    background-color:rgb(163, 168, 165) ;
+}
+h1{
+    text-align: center 35%;
+}
+h1,h2{
+    display: inline;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+li h1{
+    font-size: large;
+    
+}
+
+
