@@ -16,7 +16,7 @@ import org.springframework.stereotype.Service;
 public class UsuarioService {
     @Autowired
     iUsuarioRepository iusuarioRepository;
-     public Optional<Usuario> getByUsuario(String nombreUsuario){
+     public Optional<Usuario> getByNombreUsuario(String nombreUsuario){
          return iusuarioRepository.findByNombreUsuario(nombreUsuario);
      }
             
@@ -32,12 +32,7 @@ public class UsuarioService {
         iusuarioRepository.save(usuario);
     }
 
-    Object getByNombreUsuario(String nombreUsuario) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+  
     }
 
-    public boolean existsByUsuario(String nombreUsuario) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    }
+    

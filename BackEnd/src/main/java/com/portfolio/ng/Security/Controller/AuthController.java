@@ -62,7 +62,7 @@ public class AuthController {
      * @return
      */
     @PostMapping("/NuevoUsuario")
-    public ResponseEntity<?> NuevoUsuario(@Valid @RequestBody NuevoUsuario nuevoUsuario, BindingResult bindingResult) {
+    public ResponseEntity<?> nuevo(@Valid @RequestBody NuevoUsuario nuevoUsuario, BindingResult bindingResult) {
         
         if(bindingResult.hasErrors()){
             return new ResponseEntity(new Mensaje("Campos mal puestos o email invalido"), HttpStatus.BAD_REQUEST);
@@ -81,6 +81,7 @@ public class AuthController {
 
         Set<Rol> roles = new HashSet<>();
         roles.add(rolService.getByRolNombre(RolNombre.ROLE_USER).get());
+        
         if (nuevoUsuario.getRoles().contains("admin")) 
             roles.add(rolService.getByRolNombre(RolNombre.ROLE_ADMIN).get());
         usuario.setRoles(roles);
