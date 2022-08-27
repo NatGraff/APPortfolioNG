@@ -13,10 +13,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 
-/**
- *
- * @author natgr
- */
+
 @Entity
 public class Rol {
     @Id
@@ -31,7 +28,7 @@ public class Rol {
     public Rol() {
     }
 
-    public Rol(RolNombre rolNombre) {
+    public Rol(@NotNull RolNombre rolNombre) {
         this.rolNombre = rolNombre;
     }
     

@@ -45,6 +45,7 @@ public class JwtTokenFilter extends OncePerRequestFilter {
                 
                 String nombreUsuario = jwtProvider.getNombreUsuarioFromToken(token);
                 UserDetails userDetails = userDetailsServiceImpl.loadUserByUsername(nombreUsuario);
+               
                 UsernamePasswordAuthenticationToken auth = 
                         new UsernamePasswordAuthenticationToken(userDetails,
                         null, userDetails.getAuthorities());
@@ -52,7 +53,7 @@ public class JwtTokenFilter extends OncePerRequestFilter {
 
             }
         } catch (Exception e) {
-            logger.error("Fallo el metodo doFilterInternal");
+            logger.error("Fallo el metodo doFilterInternal" + e.getMessage());
         }
         filterChain.doFilter(request, response);
     }

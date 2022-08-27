@@ -4,10 +4,6 @@
  */
 package com.portfolio.ng.Security.Controller;
 
-/**
- *
- * @author natgr
- */
 public class Mensaje {
     private String mensaje;
     

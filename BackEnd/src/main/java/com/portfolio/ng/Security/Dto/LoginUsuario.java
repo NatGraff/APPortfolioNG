@@ -6,10 +6,7 @@ package com.portfolio.ng.Security.Dto;
 
 import javax.validation.constraints.NotBlank;
 
-/**
- *
- * @author natgr
- */
+
 public class LoginUsuario {
     @NotBlank
     private String nombreUsuario;

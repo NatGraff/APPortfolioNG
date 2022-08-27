@@ -102,7 +102,7 @@ public class AuthController {
 
         String jwt = jwtProvider.generateToken(authentication);
 
-        UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+        UserDetails userDetails = (UserDetails)authentication.getPrincipal();
 
         JwtDto jwtDto = new JwtDto(jwt, userDetails.getUsername(), userDetails.getAuthorities());
 

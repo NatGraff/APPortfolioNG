@@ -11,15 +11,8 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-/**
- *
- * @author natgr
- */
-public class UsuarioPrincipal implements UserDetails {
 
-    public static UserDetails build(Class<? extends Object> usuario) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+public class UsuarioPrincipal implements UserDetails {
 
     private String nombre;
     private String nombreUsuario;
